@@ -24,13 +24,16 @@ class Server {
         //lectura y parseo del body
         this.app.use( express.json() )
 
-        //directorio publico
-        this.app.use(express.static('puclic'))
+        
+        
     }
 
     //rutas
     routes(){
         //importamos las rutas
+        //directorio publico
+        this.app.use( express.static('public') )
+        //rutas usuario
         this.app.use(this.usuariosPath, require('../routes/usuarios.routes'))
     }
 
