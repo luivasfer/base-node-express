@@ -6,8 +6,7 @@ const bcryptjs = require("bcryptjs");
 const Usuario = require("../models/usuario");
 
 const usuariosGet = async (req = request, res = response) => {
-  res.json({ruta: "GET"});
-
+  
     const {limite = 5, desde = 0} = req.query
     const query = {estado:true}
 
